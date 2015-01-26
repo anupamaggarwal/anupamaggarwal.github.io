@@ -1,0 +1,45 @@
+<p>Agent smith</p>
+
+<p><img src="http://bgowiki.terrywri.st/images/b/b3/Agent_Smith.jpg" alt="agentsmith" /></p>
+
+<p>Smith began as an Agent, programmed by Anupam to keep order within the system by terminating human simulacra which would bring instability to the simulated workflow stream of the application, as well as any rogue programs like cron that no longer serve a purpose to software collective
+To this end, Smith possesses the ability to take control over the simulated body of any functions wired into the workflow</p>
+
+<p><code>
+Look at workflow.py to get an idea of how to use agentsmith
+</code></p>
+
+<h4 id="todos">TODOS</h4>
+
+<ol>
+  <li>Log rotate execution by day</li>
+</ol>
+
+<h4 id="capabilities">CAPABILITIES</h4>
+
+<p>v.01 &lt; alpha release &gt;
+1. Basic monitoring and alerting (define your monitoring commands, send emails in case of failures)
+2. Schedule a job at periodic time intervals on arbitary hosts
+3. Execute the said jobs and alert if there are errors
+4. Simple web interface for process monitoring (Each process governs running of a workflow)
+5. Schedule a job in background (remotely or local)
+6. Trigger dependent jobs based on job completion etc</p>
+
+<blockquote>Scratchpad</blockquote>
+
+<p>Http request to add/ delete a job to scheduler Print status of a long running jobs dependent on task monitored via email prefixing with some specific names to avoid nameclashes with python dependenvy information in fabfile scheduling information in apscheduler file tasks return a valid code when they execute decorated with background or foreground decorated with email on failure option of firing individual task ption of firing at specific time waitondecorators (done file) state of jobs in a shelve store (custom store) decorated with background or foreground decorated with email on failure option of firing individual task option of firing at specific time @parallel/serialize @background @email @dependent() offline/background execution email_on_fail email logs on failure in the fabric file background dependent(copy_task,memcache_task) foreground template background with agent smith picture shutdown take care of tasks config relating to coalesing etc email files kick jobs script takes input and a done file</p>
+
+<h4 id="software-stack-and-dependencies">SOFTWARE STACK AND DEPENDENCIES</h4>
+
+<ul>
+  <li>Tornado as the webserver</li>
+  <li>Fabric for remote execution and monitoring</li>
+  <li>Python Versions 2.6+</li>
+  <li>ApScheduler to execute jobs</li>
+</ul>
+
+<blockquote>
+INSPIRATION
+</blockquote>
+
+<p>Flower / celery task monitoring</p>
