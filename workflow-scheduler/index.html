@@ -71,6 +71,7 @@ Look at workflow.py to get an idea of how to use agentsmith
 <ol>
   <li>Basic monitoring and alerting (define your monitoring commands, send emails in case of failures)</li>
   <li>Schedule a job at periodic time intervals on arbitary hosts</li>
+  <li>Schedule a job at adhoc times </li>
   <li>Execute the said jobs and alert if there are errors</li>
   <li>Simple web interface for process monitoring (Each process governs running of a workflow)</li>
   <li>Schedule a job in background (remotely or local)</li>
@@ -79,7 +80,6 @@ Look at workflow.py to get an idea of how to use agentsmith
 
 <blockquote>Scratchpad</blockquote>
 
-<p>Http request to add/ delete a job to scheduler Print status of a long running jobs dependent on task monitored via email prefixing with some specific names to avoid nameclashes with python dependenvy information in fabfile scheduling information in apscheduler file tasks return a valid code when they execute decorated with background or foreground decorated with email on failure option of firing individual task ption of firing at specific time waitondecorators (done file) state of jobs in a shelve store (custom store) decorated with background or foreground decorated with email on failure option of firing individual task option of firing at specific time @parallel/serialize @background @email @dependent() offline/background execution email_on_fail email logs on failure in the fabric file background dependent(copy_task,memcache_task) foreground template background with agent smith picture shutdown take care of tasks config relating to coalesing etc email files kick jobs script takes input and a done file</p>
 
 <h4 id="software-stack-and-dependencies">SOFTWARE STACK AND DEPENDENCIES</h4>
 
