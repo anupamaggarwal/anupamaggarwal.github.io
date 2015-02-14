@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>AgentSmith</title>
+<title>HayStack</title>
 <meta name="description" content="blog website under works">
 <meta name="author" content="anupam">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -36,7 +36,7 @@
 <section class="post-container">
     <div >
         <div >
-        <time class="post_coverrofile_snippetst-date">Published Jan 26, 2014</time>
+        <time class="post_coverrofile_snippetst-date">Published Feb 14, 2015</time>
     </div>
 </div>              <!-- post-author-card -->
 
@@ -44,61 +44,75 @@
 
 <div class="post-body">
     <p class="post-category tk-freight-sans-pro">programming</p>
-    <h1 class="post-title">AgentSmith</h1>
-    <div class="post-content"><p>Workflow-Scheduler</p>
+    <h1 class="post-title">HayStack</h1>
+    <div class="post-content"><p>HayStack</p>
 
-<p><img src="http://bgowiki.terrywri.st/images/b/b3/Agent_Smith.jpg" alt="agentsmith" /></p>
+<p>Graph abstraction built on top of Hbase
+,supports graph operations and shallow graph traversals</p>
 
-<p><em>Smith began as an Agent, programmed by Anupam to keep order within the system by terminating human simulacra which would bring instability to the simulated workflow stream of the application, as well as any rogue programs like cron that no longer serve a purpose to software collective
-To this end, Smith possesses the ability to take control over the simulated body of any functions wired into the workflow</em></p>
+<p>Following operations are supported:-</p>
 
-<p>AgentSmith is a workflow scheduler which can be used to stitch together a workflow (set of tasks) over a set of machines.</p>
-
-<p><code>
-Look at workflow.py to get an idea of how to use agentsmith
-</code></p>
-
-<h4 id="todos">TODOS</h4>
+<p><b>Graph operations:</b></p>
 
 <ol>
-  <li>Log rotate execution by day</li>
+  <li>CRUD operations on edges and nodes</li>
+  <li>Retrieve a node by indexed property</li>
+  <li>Retrieve edge by indexed property</li>
+  <li>Add properties to nodes and edges</li>
+  <li>Delete and update for edges [WIP]</li>
+  <li>Scans over indexed/sorted properties</li>
+  <li>Support for Map-Reduce/Bulk uploads</li>
 </ol>
 
-<h4 id="capabilities">CAPABILITIES</h4>
-
-<p>v.01 &lt; alpha release &gt;</p>
+<p><b>Nodes have 3 kinds of properties</b></p>
 
 <ol>
-  <li>Basic monitoring and alerting (define your monitoring commands, send emails in case of failures)</li>
-  <li>Schedule a job at periodic time intervals on arbitary hosts</li>
-  <li>Schedule a job at adhoc times </li>
-  <li>Execute the said jobs and alert if there are errors</li>
-  <li>Simple web interface for process monitoring (Each process governs running of a workflow)</li>
-  <li>Schedule a job in background (remotely or local)</li>
-  <li>Trigger dependent jobs based on job completion etc</li>
+  <li>
+    <p>Indexed Unique attributes: One unique value for key which allows retrieval of node by  this key) [Unique UserId for a user in a social network]</p>
+  </li>
+  <li>
+    <p>Indexed attributes (multiple values for key) provides for scans/retrieval of all the values for this particular attribute key and value [Gender /Age for a user for example]</p>
+  </li>
+  <li>
+    <p>Attributes (normal)</p>
+  </li>
 </ol>
 
-<blockquote>Scratchpad</blockquote>
+<p><b>Edges have 3 kinds of properties</b></p>
 
+<ol>
+  <li>Sorted attributes</li>
+  <li>Indexed attributes</li>
+  <li>Attributes (normal)</li>
+</ol>
 
-<h4 id="software-stack-and-dependencies">SOFTWARE STACK AND DEPENDENCIES</h4>
+<p>Refer to Api.java to find out operations supported</p>
+
+<p>Developers documentation todo</p>
 
 <ul>
-  <li>Tornado as the webserver</li>
-  <li>Fabric for remote execution and monitoring</li>
-  <li>Python Versions 2.6+</li>
-  <li>ApScheduler to execute jobs</li>
+  <li>Document web interface using sigmajs</li>
+  <li>Document web service</li>
 </ul>
 
-<blockquote>
-INSPIRATION
-</blockquote>
+<p><b>Instructions to build</b></p>
 
-<p>Flower / celery task monitoring</p>
+<p><b>Instructions to install</b></p>
+
+<p>Inspiration:-</p>
+
+<p>Tao (Facebook)
+https://www.cs.cmu.edu/~pavlo/courses/fall2013/static/papers/11730-atc13-bronson.pdf
+Zen (Pinterest)
+https://www.youtube.com/watch?v=yI0vHfgK6oI</p>
+
+<p>Future enhancements:-</p>
+
+<p>SQL like query language</p>
 </div>
     <div class="clear"></div>
     <div class="post-pagination">
-        <a class="post-previous" href="/frontend-blog">Previous</a>
+        <a class="post-previous" href="/workflow-scheduler">Previous</a>
         
     </div>
 </div> <!-- post-body -->
